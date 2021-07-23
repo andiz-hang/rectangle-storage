@@ -29,7 +29,7 @@ $('.edit').off('click').click(function(){
         url: '/rectangle/edit/'+id,
         // data: 'id='+$('#id').val()+'&width='+$('#width').val()+'&height='+$('#height').val()+'&color='+$('#color').val(),
         success: function(data) {
-            var win = window.open("", "Ratting", "width=550, height=170,left=150,top=200,toolbar=0,status=0,");
+            var win = window.open("", "Ratting", "width=550, height=500,left=150,top=200,toolbar=0,status=0,");
             // var win = window.open();
             win.document.write(data);
         }
