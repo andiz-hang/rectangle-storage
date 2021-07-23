@@ -38,7 +38,7 @@ $('.rectangle').off('click').click(function(){
         method: 'get',
         url: '/rectangle/details/'+id,
         success: function(data) {
-            var win = window.open("", "Ratting", "width=550, height=500,left=150,top=200,toolbar=0,status=0,");
+            var win = window.open("", "", "width=550, height=500,left=150,top=200,toolbar=0,status=0,");
             win.document.write(data);
         }
     });

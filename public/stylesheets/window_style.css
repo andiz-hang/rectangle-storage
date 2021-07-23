@@ -19,3 +19,7 @@ input {
 button {
     margin-top: 10px;
 }
+
+#color {
+    width: 200px;
+}

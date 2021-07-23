@@ -36,15 +36,14 @@
         <tr>
             <td>Color</td>
             <td>
-                <input type="color" name="color" value="<%= result.color %>" required />
+                <input type="color" id="color" name="color" value="<%= result.color %>" required />
             </td>
         </tr>
     </table>
 
-    <button id="cancel_edit">Cancel</button>
-    <button id="confirm_edit">Edit Rectangle</button>
+    <button onclick="editRect()">Edit Rectangle</button>
 </body>
 
 <script src="../javascripts/jquery.min.js"></script>
-<script src="../javascripts/script.js"></script>
+<script src="../javascripts/edit.js"></script>
 </html>
