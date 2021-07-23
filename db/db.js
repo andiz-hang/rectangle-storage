@@ -1,12 +1,11 @@
 const {Pool} = require('pg');
 require('dotenv').config();
 
-// console.log(process.env.PGURL);
 const pool = new Pool({
-    connectionString: process.env.PGURL
-    // connectionString: "postgres://postgres:pgres!@localhost/postgres"
+    connectionString: process.env.PGURL //"postgres://postgres:pgres!@localhost/postgres"
 });
 
+// Get all Rectangles in the database
 async function getRects() {
     const query = {
         text: `SELECT * FROM rectangle ORDER BY id`
@@ -21,6 +20,7 @@ async function getRects() {
     }
 }
 
+// Get a rectangle by its id
 async function getRectByID(id) {
     const query = {
         text: `SELECT * FROM rectangle WHERE id = $1`,
@@ -36,6 +36,7 @@ async function getRectByID(id) {
     }
 }
 
+// Add a rectangle to the database
 async function addRect(req) {
     const query = {
         text: `INSERT INTO rectangle (width, height, color) VALUES ($1,$2,$3)`,
@@ -52,7 +53,7 @@ async function addRect(req) {
     }
 }
 
-// TODO: Edit Rect
+// TODO: Update a rectangle in the database
 async function editRect(req) {
     const query = {
         text: `UPDATE rectangle SET width = $1, height = $2, color = $3 WHERE id = $4`,
@@ -69,7 +70,7 @@ async function editRect(req) {
     }
 }
 
-// TODO: Delete Rect
+// Delete a rectangle from the database
 async function delRect(id) {
     const query = {
         text: `DELETE FROM rectangle WHERE id=$1`,
@@ -85,16 +86,6 @@ async function delRect(id) {
         return false;
     }
 }
-
-// var sql = 'SELECT * FROM rectangle ORDER BY id';
-// pool.query(sql, function(err, result) {
-//     if (err) {
-//         console.log(err);
-//     } else {
-//         console.log(result.rows);
-//     }
-// })
-
 
 module.exports = {
     getRects,
