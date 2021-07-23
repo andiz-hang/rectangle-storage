@@ -1,0 +1,62 @@
+body {
+    font-family: sans-serif;
+}
+
+input, button, legend {
+    font-size: 1em;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    border: 2px solid black;
+    width: 90%;
+    height: fit-content;
+    min-height: 60px;
+    padding: 5px;
+}
+
+.rectangle {
+    display: inline-block;
+    margin: 0px;
+    max-width: 750px;
+}
+
+.edit, .del {
+    float: inline-end;
+    width: 100px;
+    margin-right: 20px;
+    margin-bottom: 0;
+}
+
+#color {
+    width: 170px
+}
+
+input, button {
+    border-radius: 10px;
+    border: 2px solid black;
+    padding: 5px;
+    width: 200px;
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+button {
+    width: 215px;
+}
+  
+button:hover, div:hover {
+    cursor:pointer;
+}
+  
+section {
+    margin-top:50px;
+    margin-bottom:20px;
+    border-radius: 10px;
+    border: 1px solid black;
+    width: 1000px;
+    padding: 20px;
+}

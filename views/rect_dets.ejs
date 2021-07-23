@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rectangle Details</title>
+    
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    <link rel="stylesheet" href="../stylesheets/window_style.css">
+
+</head>
+<body>
+    <table>
+        <tr>
+            <!-- <td>ID</td> -->
+            <td>ID</td>
+            <td>
+                <input type="number" id="id" name="id" value="<%= result.id %>" required disabled />
+            </td>
+        </tr>
+
+        <tr>
+            <td>Width</td>
+            <td>
+                <input type="number" id="width" name="width" placeholder="<%= result.width %> (px)" required />
+            </td>
+        </tr>
+
+        <tr>
+            <td>Height</td>
+            <td>
+                <input type="number" id="height" name="height" placeholder="<%= result.height %> (px)" required />
+            </td>
+        </tr>
+
+        <tr>
+            <td>Color</td>
+            <td>
+                <input type="color" id="color" name="color" value="<%= result.color %>" required />
+            </td>
+        </tr>
+    </table>
+</body>
+
+<script src="../javascripts/jquery.min.js"></script>
+<script src="../javascripts/script.js"></script>
+</html>
