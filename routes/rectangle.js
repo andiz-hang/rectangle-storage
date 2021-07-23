@@ -18,7 +18,7 @@ router.get('/edit/:id', async function(req, res, next) {
     res.render('rect_edit', {result: await db.getRectByID(req.params.id)});
 });
 
-// TODO: Update the database when the rectangle is editted
+// Update the database when the rectangle is editted
 router.post('/edit', async function(req, res, next) {
     console.log(req.body);
     await db.editRect(req.body);
