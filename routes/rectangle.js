@@ -3,29 +3,31 @@ var router = express.Router();
 
 var db = require('../db/db')
 
+// Client requests to add a rectangle
 router.post('/', async function(req, res, next) {
     await db.addRect(req.body);
     res.redirect('/');
 });
 
+// Client requests to delete a rectangle
 router.delete('/:id', async function(req, res, next) {
     await db.delRect(req.params.id);
     res.redirect(303, '/');
 });
 
-// Open Rectangle Editor form
+// Client requests to view the edit rectangle form
 router.get('/edit/:id', async function(req, res, next) {
     res.render('rect_edit', {result: await db.getRectByID(req.params.id)});
 });
 
-// Update the database when the rectangle is editted
+// Client requests to edit the rectangle
 router.post('/edit', async function(req, res, next) {
     console.log(req.body);
     await db.editRect(req.body);
     res.redirect('/');
 });
 
-// Show Rectangle Details
+// Client requests to view the rectangle details
 router.get('/details/:id', async function(req, res, next) {
     res.render('rect_dets', {result: await db.getRectByID(req.params.id)});
 });
