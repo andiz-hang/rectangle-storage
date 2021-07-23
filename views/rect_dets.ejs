@@ -13,37 +13,25 @@
 <body>
     <table>
         <tr>
-            <!-- <td>ID</td> -->
             <td>ID</td>
-            <td>
-                <input type="number" id="id" name="id" value="<%= result.id %>" required disabled />
-            </td>
+            <td> <%= result.id %> </td>
         </tr>
 
         <tr>
             <td>Width (px)</td>
-            <td>
-                <input type="number" id="width" name="width" value=<%= result.width %> required />
-            </td>
+            <td> <%= result.width %> </td>
         </tr>
 
         <tr>
             <td>Height (px)</td>
-            <td>
-                <input type="number" id="height" name="height" value=<%= result.height %> required />
-            </td>
+            <td> <%= result.height %> </td>
         </tr>
 
         <tr>
             <td>Color</td>
-            <td>
-                <input type="color" id="color" name="color" value="<%= result.color %>" required />
-            </td>
+            <td> <%= result.color %> </td>
         </tr>
     </table>
-
-    <button id="cancel_edit">Cancel</button>
-    <button id="confirm_edit">Edit Rectangle</button>
 </body>
 
 <script src="../javascripts/jquery.min.js"></script>
