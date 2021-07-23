@@ -24,6 +24,10 @@ li {
     max-width: 750px;
 }
 
+.rectangle:hover {
+    border: 1px solid black;
+}
+
 .edit, .del {
     float: inline-end;
     width: 100px;
