@@ -1,47 +1,23 @@
 body {
     font-family: sans-serif;
-    margin-left: 50px;
+    margin: 50px;
+}
+  
+section {
+    margin-top:30px;
+    margin-bottom:20px;
+    border-radius: 10px;
+    border: 1px solid black;
+    width: inherit;
+    padding: 20px;
 }
 
-input, button, legend {
-    font-size: 1em;
-}
-
-ul {
-    padding: 0;
-    list-style-type: none;
-}
-
-li {
-    border: 2px solid black;
-    width: 90%;
-    height: fit-content;
-    min-height: 60px;
-    padding: 5px;
-}
-
-.rectangle {
-    display: inline-block;
-    margin: 0px;
-    max-width: 750px;
-}
-
-.rectangle:hover {
-    box-shadow: inset -2px 0 0 black, inset 0 -2px 0 black, inset 2px 0 0 black, inset 0 2px 0 black;
-}
-
-.edit, .del {
-    float: inline-end;
-    width: 100px;
-    margin-right: 20px;
-    margin-bottom: 0;
-}
-
-#color {
-    width: 170px
+legend {
+    font-size: 2em;
 }
 
 input, button {
+    font-size: 1em;
     border-radius: 10px;
     border: 2px solid black;
     padding: 5px;
@@ -59,17 +35,41 @@ button:focus {
     background-color: lightgray;
 }
 
-button:foc
-  
 button:hover, div:hover {
     cursor:pointer;
 }
-  
-section {
-    margin-top:50px;
-    margin-bottom:20px;
-    border-radius: 10px;
-    border: 1px solid black;
-    width: 1000px;
-    padding: 20px;
+
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+li {
+    border: 2px solid black;
+    width: inherit;
+    height: fit-content;
+    min-height: 60px;
+    padding: 5px;
+}
+
+.rectangle {
+    display: inline-block;
+    margin: 0px;
+    max-width: 750px;
+}
+
+.rectangle:hover {
+    box-shadow: inset -2px 0 0 black, inset 0 -2px 0 black, inset 2px 0 0 black, inset 0 2px 0 black;
+    cursor: pointer;
+}
+
+.edit, .del {
+    float: inline-end;
+    width: 100px;
+    margin-right: 20px;
+    margin-bottom: 0;
+}
+
+#color {
+    width: 170px
 }
