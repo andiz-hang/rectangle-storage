@@ -39,8 +39,8 @@ async function getRectByID(id) {
 // Add a rectangle to the database
 async function addRect(req) {
     const query = {
-        text: `INSERT INTO rectangle (width, height, color) VALUES ($1,$2,$3)`,
-        values: [req.width, req.height, req.color]
+        text: `INSERT INTO rectangle (name, width, height, color) VALUES ($1,$2,$3,$4)`,
+        values: [req.name, req.width, req.height, req.color]
     }
 
     try {
