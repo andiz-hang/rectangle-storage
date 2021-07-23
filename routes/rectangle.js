@@ -13,7 +13,7 @@ router.delete('/:id', async function(req, res, next) {
     res.redirect(303, '/');
 });
 
-// TODO: Open a new window form
+// Open Rectangle Editor form
 router.get('/edit/:id', async function(req, res, next) {
     res.render('rect_edit', {result: await db.getRectByID(req.params.id)});
 });
@@ -23,7 +23,7 @@ router.post('/edit', function(req, res, next) {
     res.render('rect_edit');
 });
 
-// TODO: Set up response for rectangle details
+// Show Rectangle Details
 router.get('/details/:id', async function(req, res, next) {
     res.render('rect_dets', {result: await db.getRectByID(req.params.id)});
 });
