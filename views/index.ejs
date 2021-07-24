@@ -25,13 +25,13 @@
         <button onclick="addRect()">Add Rectangle</button>
     </section>
 
-    <h3>Current Rectangles: (Click on a rectangle to view its details)</h3>
+    <h3>Current Rectangles: (Click on a rectangle to view its details. Hover over a rectangle to see its name.)</h3>
 
     <!-- Rectangles appear here -->
     <ul>
         <% result.forEach(function(r) { %>
             <li id="<%= r.id %>">
-                <div style="width: <%= r.width %>px; height: <%= r.height %>px; background-color: <%= r.color  %>" class="rectangle"></div>
+                <div style="width: <%= r.width %>px; height: <%= r.height %>px; background-color: <%= r.color  %>" class="rectangle" title="<%= r.name %> "></div>
 
                 <button class="del">Delete</button>
                 <button class="edit">Edit</button>
