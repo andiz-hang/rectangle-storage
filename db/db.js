@@ -56,8 +56,8 @@ async function addRect(req) {
 // Update a rectangle in the database
 async function editRect(req) {
     const query = {
-        text: `UPDATE rectangle SET width = $1, height = $2, color = $3 WHERE id = $4`,
-        values: [req.width, req.height, req.color, req.id]
+        text: `UPDATE rectangle SET name = $5, width = $1, height = $2, color = $3 WHERE id = $4`,
+        values: [req.width, req.height, req.color, req.id, req.name]
     }
 
     try {

@@ -22,7 +22,6 @@ router.get('/edit/:id', async function(req, res, next) {
 
 // Client requests to edit the rectangle
 router.post('/edit', async function(req, res, next) {
-    console.log(req.body);
     await db.editRect(req.body);
     res.redirect('/');
 });
