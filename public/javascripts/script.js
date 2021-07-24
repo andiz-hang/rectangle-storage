@@ -46,5 +46,5 @@ $('.rectangle').off('click').click(function(){
 
 function reload() {
     window.location.replace('/');
-    window.location.reload();
+    window.location.reload("true");
 }
