@@ -2,8 +2,26 @@ const {Pool} = require('pg');
 require('dotenv').config();
 
 const pool = new Pool({
-    connectionString: process.env.PGURL //"postgres://postgres:pgres!@localhost/postgres"
+    user: 'dbuser', // dbuser
+    host: 'db', // db
+    database: 'postgres',
+    password: '1234',
+    // port: 4444
+    // connectionString: process.env.PGURL //"postgres://postgres:pgres!@localhost/postgres"
 });
+
+async function createTable() {
+    const query = {
+        text: `CREATE TABLE IF NOT EXISTS rectangle (id serial primary key, name varchar(50), width varchar(10), height varchar(10), color varchar(20))`
+    }
+
+    try {
+        var result = await pool.query(query);
+    } catch (err) {
+        console.error(err)
+        return false;
+    }
+}
 
 // Get all Rectangles in the database
 async function getRects() {
@@ -88,6 +106,7 @@ async function delRect(id) {
 }
 
 module.exports = {
+    createTable,
     getRects,
     getRectByID,
     addRect,

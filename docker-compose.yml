@@ -1,0 +1,15 @@
+version: '3.9'
+
+services: 
+    server: 
+        # Enter here vvvv
+        image: 'rectangle-storage'
+        ports:
+            - '3000:3000'
+    db:
+        image: 'postgres'
+        ports: 
+            - '4444:5432'
+        environment: 
+            POSTGRES_USER: 'dbuser'
+            POSTGRES_PASSWORD: '1234' 

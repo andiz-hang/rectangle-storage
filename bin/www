@@ -9,12 +9,20 @@ var debug = require('debug')('a34-testing:server');
 var http = require('http');
 require("dotenv").config();
 
+var db = require('../db/db');
+
 /**
  * Get port from environment and store in Express.
  */
 
 var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
+
+/**
+ * Create the DB table
+ */
+
+db.createTable();
 
 /**
  * Create HTTP server.
