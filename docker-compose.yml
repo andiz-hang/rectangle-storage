@@ -1,11 +1,6 @@
 version: '3.9'
 
 services: 
-    server: 
-        # Enter here vvvv
-        image: 'rectangle-storage'
-        ports:
-            - '3000:3000'
     db:
         image: 'postgres'
         ports: 
@@ -13,3 +8,9 @@ services:
         environment: 
             POSTGRES_USER: 'dbuser'
             POSTGRES_PASSWORD: '1234' 
+    server: 
+        image: 'pyrenthesis/rectangle-storage'
+        ports:
+            - '3000:3000'
+        depends_on:
+            - "db"
