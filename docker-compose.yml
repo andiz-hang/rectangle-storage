@@ -9,8 +9,7 @@ services:
             POSTGRES_USER: 'dbuser'
             POSTGRES_PASSWORD: '1234' 
     server: 
-        # image: 'pyrenthesis/rectangle-storage'
-        build: . # TODO: Remove this
+        image: 'pyrenthesis/rectangle-storage'
         ports:
             - '3000:3000'
         depends_on:
